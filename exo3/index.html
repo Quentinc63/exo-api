@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Webcam avec filtre</title>
+</head>
+
+<body>
+
+    <h1>Webcam avec filtre</h1>
+
+    <video id="video" autoplay></video>
+    <br>
+
+    <label for="filter">Filtre :</label>
+    <select id="filter">
+        <option value="none">Aucun</option>
+        <option value="grayscale">Noir & Blanc</option>
+        <option value="sepia">Sépia</option>
+        <option value="invert">Inversé</option>
+    </select>
+    <br><br>
+
+    <button id="capture">Prendre une photo</button>
+    <button id="download">Télécharger</button>
+    <br><br>
+
+    <canvas id="canvas"></canvas>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
