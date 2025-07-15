@@ -1,19 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Todo List - Drag & Drop</title>
 </head>
-<body>
-    <ul>
-        <li>DRAGGABLE 1</li>
-        <li>DRAGGABLE 2</li>
-        <li>DRAGGABLE 3</li>
-        <li>DRAGGABLE 4</li>
-    </ul>
 
+<body>
+    <div>
+        <h2>Liste de tâches - Drag & Drop</h2>
+        <ul id="todoList">
+            <li draggable="true" data-id="1">Faire les courses</li>
+            <li draggable="true" data-id="2">Nettoyer la maison</li>
+            <li draggable="true" data-id="3">Préparer le dîner</li>
+            <li draggable="true" data-id="4">Faire du sport</li>
+            <li draggable="true" data-id="5">Lire un livre</li>
+        </ul>
+        <button id="addTaskBtn">Ajouter une tâche</button>
+        <input type="text" id="newTaskInput" placeholder="Nouvelle tâche...">
+    </div>
 
     <script src="main.js"></script>
 </body>
+
 </html>

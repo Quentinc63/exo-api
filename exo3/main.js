@@ -10,7 +10,7 @@ navigator.mediaDevices.getUserMedia({ video: true })
         video.srcObject = stream;
     })
     .catch(error => {
-        console.error('Erreur d’accès à la webcam:', error);
+        console.error(error);
     });
 
 captureButton.addEventListener('click', () => {

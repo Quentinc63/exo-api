@@ -1,13 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Clipboard API - Copier du texte</title>
 </head>
 
 <body>
+    <div>
+        <h2>Clipboard API - Copier du texte</h2>
+
+        <div>
+            <h3>Copier depuis un champ input</h3>
+            <input type="text" id="textInput" value="Texte à copier depuis un input"
+                placeholder="Tapez votre texte ici...">
+            <button id="copyInputBtn">Copier</button>
+        </div>
+
+        <div>
+            <h3>Copier depuis un élément div</h3>
+            <div id="textDiv">Ce texte peut être copié depuis un élément div !</div>
+            <button id="copyDivBtn">Copier le texte du div</button>
+        </div>
+
+        <div>
+            <h3>Copier du texte prédéfini</h3>
+            <button id="copyPredefinedBtn">Copier un message prédéfini</button>
+        </div>
+
+        <div>
+            <h3>Zone de test</h3>
+            <textarea id="testArea" placeholder="Collez ici pour tester (Ctrl+V)..." rows="4" cols="50"></textarea>
+        </div>
+
+        <div id="notification" style="display: none;"></div>
+
+        <div id="clipboardStatus">
+            <p><strong>Statut de l'API Clipboard :</strong> <span id="apiStatus">Vérification...</span></p>
+        </div>
+    </div>
+
     <script src="main.js"></script>
 </body>
 

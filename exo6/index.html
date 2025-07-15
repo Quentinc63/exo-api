@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File API - Chargement d'image</title>
+</head>
+
+<body>
+    <div>
+        <h2>Chargement d'image</h2>
+
+        <div>
+            <label for="fileInput">Sélectionner une image :</label>
+            <input type="file" id="fileInput" accept="image/*">
+        </div>
+
+        <div id="imageContainer">
+            <img id="imagePreview" alt="Aperçu de l'image" style="display: none; max-width: 500px; max-height: 400px;">
+        </div>
+
+        <div id="fileInfo" style="display: none;">
+            <p><strong>Nom du fichier :</strong> <span id="fileName"></span></p>
+            <p><strong>Taille :</strong> <span id="fileSize"></span></p>
+            <p><strong>Type :</strong> <span id="fileType"></span></p>
+            <p><strong>Dernière modification :</strong> <span id="fileLastModified"></span></p>
+        </div>
+
+        <button id="clearBtn" style="display: none;">Effacer l'image</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
