@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Bibliothèque</title>
+</head>
+
+<body>
+    <h1>Ma Bibliothèque</h1>
+
+    <div id="add-book">
+        <h2>Ajouter un livre</h2>
+        <input type="text" id="isbn-input" placeholder="ISBN (ex: 9780140328721)" />
+        <button onclick="addBook()">Ajouter</button>
+        <div id="loading" style="display: none;">Chargement...</div>
+    </div>
+
+    <div id="book-list">
+        <h2>Mes livres</h2>
+        <div id="books"></div>
+    </div>
+
+    <div id="edit-modal"
+        style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border: 2px solid black; padding: 20px; z-index: 1000;">
+        <h3>Modifier le livre</h3>
+        <input type="text" id="edit-title" placeholder="Titre" /><br><br>
+        <input type="text" id="edit-author" placeholder="Auteur" /><br><br>
+        <input type="text" id="edit-year" placeholder="Année" /><br><br>
+        <input type="text" id="edit-cover" placeholder="URL couverture" /><br><br>
+        <button onclick="saveEdit()">Sauvegarder</button>
+        <button onclick="cancelEdit()">Annuler</button>
+    </div>
+
+    <div id="overlay"
+        style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999;"
+        onclick="cancelEdit()"></div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
